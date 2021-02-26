@@ -1,0 +1,11 @@
+using System;
+using System.Collections.Generic;
+using BusinessLogic.models;
+
+namespace BusinessLogic
+{
+    public interface IWorkshopManager
+    {
+        List<Workshop> GetAllWorkshops();
+    }
+}
