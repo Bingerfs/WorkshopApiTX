@@ -10,6 +10,7 @@ namespace BusinessLogic
         Workshop CreateWorkshop(Workshop workshop);
         Workshop DeleteWorkshop(int id);
         Workshop UpdateWorkshop(Workshop workshop);
+        Workshop ChangeWorkshopStatus(int id, string status);
 
     }
     
