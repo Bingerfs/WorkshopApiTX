@@ -49,5 +49,11 @@ namespace ApiWorkshop.Controllers
             workshop.Id = id;
             return _workshopManager.UpdateWorkshop(workshop);
         }
+
+        [HttpPatch("{id}/cancel-workshop")]
+        public Workshop CancelWorkshop(int id)
+        {
+            return _workshopManager.ChangeWorkshopStatus(id, "Cancelled");
+        }
     }
 }

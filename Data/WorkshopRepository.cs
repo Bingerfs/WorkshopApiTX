@@ -39,5 +39,12 @@ namespace Data
             workshops[foundWorkshopIndex] = entity;
             return workshops[foundWorkshopIndex];
         }
+
+        public WorkshopEntity ChangeWorkshopStatus(int id, string status)
+        {
+            int foundWorkshopIndex = workshops.FindIndex(workshop => workshop.Id == id);
+            workshops[foundWorkshopIndex].Status = status;
+            return workshops[foundWorkshopIndex];
+        }
     }
 }

@@ -45,5 +45,12 @@ namespace BusinessLogic
             Workshop updatedWorkshop = mapper.EntityToWorkshop(_workshopRepository.UpdateWorkshop(entity));
             return updatedWorkshop;
         }
+
+        public Workshop ChangeWorkshopStatus(int id, string status)
+        {
+            WorkshopEntityMapper mapper = new WorkshopEntityMapper();
+            Workshop patchedWorkshop = mapper.EntityToWorkshop(_workshopRepository.ChangeWorkshopStatus(id, status));
+            return patchedWorkshop;
+        }
     }
 }
