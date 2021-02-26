@@ -55,5 +55,11 @@ namespace ApiWorkshop.Controllers
         {
             return _workshopManager.ChangeWorkshopStatus(id, "Cancelled");
         }
+
+        [HttpPatch("{id}/postpone-workshop")]
+        public Workshop PostponeWorkshop(int id)
+        {
+            return _workshopManager.ChangeWorkshopStatus(id, "Postponed");
+        }
     }
 }
