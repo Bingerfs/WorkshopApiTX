@@ -25,5 +25,12 @@ namespace Data
             workshops.Add(entity);
             return entity;
         }
+
+        public WorkshopEntity DeleteWorkshop(int id)
+        {
+            WorkshopEntity entity = workshops.Find(workshop => workshop.Id == id);
+            workshops.RemoveAll(workshop => workshop.Id == id);
+            return entity;
+        }
     }
 }

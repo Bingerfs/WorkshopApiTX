@@ -30,5 +30,12 @@ namespace BusinessLogic
             Workshop createdWorkshop = mapper.EntityToWorkshop(_workshopRepository.CreateWorkshop(entity));
             return createdWorkshop;
         }
+
+        public Workshop DeleteWorkshop(int id)
+        {
+            WorkshopEntityMapper mapper = new WorkshopEntityMapper();
+            Workshop deletedWorkshop = mapper.EntityToWorkshop(_workshopRepository.DeleteWorkshop(id));
+            return deletedWorkshop;
+        }
     }
 }

@@ -8,6 +8,9 @@ namespace BusinessLogic
     {
         List<Workshop> GetAllWorkshops();
         Workshop CreateWorkshop(Workshop workshop);
+        Workshop DeleteWorkshop(int id);
+
+
     }
     
 }
