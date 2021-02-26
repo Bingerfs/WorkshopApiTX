@@ -7,5 +7,6 @@ namespace Data
     public interface IWorkshopRepository
     {
         List<WorkshopEntity> GetAllWorkshops();
+        WorkshopEntity CreateWorkshop(WorkshopEntity entity);
     }
 }

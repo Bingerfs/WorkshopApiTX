@@ -18,5 +18,12 @@ namespace Data
         {
             return workshops;
         }
+
+        public WorkshopEntity CreateWorkshop(WorkshopEntity entity)
+        {
+            entity.Id = workshops.Count + 1;
+            workshops.Add(entity);
+            return entity;
+        }
     }
 }

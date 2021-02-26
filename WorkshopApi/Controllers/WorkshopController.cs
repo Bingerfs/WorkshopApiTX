@@ -30,5 +30,11 @@ namespace ApiWorkshop.Controllers
         {
             return _workshopManager.GetAllWorkshops();
         }
+
+        [HttpPost]
+        public Workshop CreateAWorkshop(Workshop workshop)
+        {
+            return _workshopManager.CreateWorkshop(workshop);
+        }
     }
 }

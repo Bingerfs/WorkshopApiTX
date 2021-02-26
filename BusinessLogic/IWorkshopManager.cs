@@ -7,5 +7,7 @@ namespace BusinessLogic
     public interface IWorkshopManager
     {
         List<Workshop> GetAllWorkshops();
+        Workshop CreateWorkshop(Workshop workshop);
     }
+    
 }

@@ -22,5 +22,13 @@ namespace BusinessLogic
             List<Workshop> workshopsList = _workshopRepository.GetAllWorkshops().Select(entity => mapper.EntityToWorkshop(entity)).ToList();
             return workshopsList;
         }
+
+        public Workshop CreateWorkshop(Workshop workshop)
+        {
+            WorkshopEntityMapper mapper = new WorkshopEntityMapper();
+            WorkshopEntity entity = mapper.WorkshopToEntity(workshop);
+            Workshop createdWorkshop = mapper.EntityToWorkshop(_workshopRepository.CreateWorkshop(entity));
+            return createdWorkshop;
+        }
     }
 }
