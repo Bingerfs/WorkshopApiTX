@@ -42,5 +42,12 @@ namespace ApiWorkshop.Controllers
         {
             return _workshopManager.DeleteWorkshop(id);
         }
+
+        [HttpPut("{id}")]
+        public Workshop UpdateWorkshop(int id, Workshop workshop)
+        {
+            workshop.Id = id;
+            return _workshopManager.UpdateWorkshop(workshop);
+        }
     }
 }

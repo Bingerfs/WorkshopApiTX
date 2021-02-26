@@ -32,5 +32,12 @@ namespace Data
             workshops.RemoveAll(workshop => workshop.Id == id);
             return entity;
         }
+
+        public WorkshopEntity UpdateWorkshop(WorkshopEntity entity)
+        {
+            int foundWorkshopIndex = workshops.FindIndex(workshop => workshop.Id == entity.Id);
+            workshops[foundWorkshopIndex] = entity;
+            return workshops[foundWorkshopIndex];
+        }
     }
 }
